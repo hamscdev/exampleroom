@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_height="35dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight=".5"
+            android:id="@+id/titleSection"
+            android:fontFamily="@font/montserrat_medium"
+            android:text="Titulo de sección"
+            android:textAlignment="center"
+            android:textSize="20sp" />
+        <ImageButton
+            android:id="@+id/closeModal"
+            android:layout_width="35dp"
+            android:background="@color/transparente"
+            android:src="@drawable/baseline_close_24"
+            android:layout_height="35dp"/>
+    </LinearLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:endIconMode="clear_text"
+        android:layout_width="match_parent"
+        app:counterEnabled="true"
+        app:counterMaxLength="25"
+        android:layout_marginTop="25dp"
+        app:helperTextEnabled="true"
+        android:hint="Nombre del producto"
+        android:fontFamily="@font/montserrat"
+        app:hintEnabled="true"
+        app:helperText="Maximo caracteres"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:maxLines="1"
+            android:textSize="12sp"
+            android:inputType="textCapCharacters"
+            android:id="@+id/nameProduct"
+            android:maxLength="25"
+            android:fontFamily="@font/montserrat"
+            android:layout_height="50dp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        app:endIconMode="clear_text"
+        android:layout_width="match_parent"
+        app:counterEnabled="true"
+        android:layout_marginTop="15dp"
+        app:counterMaxLength="250"
+        app:helperTextEnabled="true"
+        android:fontFamily="@font/montserrat"
+        android:hint="Descripción del producto"
+        app:hintEnabled="true"
+        app:helperText="Maximo caracteres"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:maxLength="250"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat"
+            android:id="@+id/description"
+            android:layout_height="50dp">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="15dp"
+        android:fontFamily="@font/montserrat"
+        android:hint="Costo del producto"
+        app:counterEnabled="true"
+        app:counterMaxLength="10"
+        app:endIconMode="clear_text"
+        app:helperText="Dígitos máximo"
+        app:helperTextEnabled="true"
+        app:hintEnabled="true">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/costProduct"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="12sp"
+            android:fontFamily="@font/montserrat"
+            android:inputType="numberDecimal"
+            android:maxLength="10">
+
+        </com.google.android.material.textfield.TextInputEditText>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:layout_width="150dp"
+        android:text="Guardar"
+        android:id="@+id/saveInformation"
+        android:background="@color/green"
+        android:layout_marginTop="50dp"
+        android:textColor="@color/white"
+        android:fontFamily="@font/montserrat"
+        android:layout_gravity="center_horizontal"
+        android:drawableLeft="@drawable/save"
+        android:padding="15dp"
+        android:layout_height="50dp"></androidx.appcompat.widget.AppCompatButton>
+
+</androidx.appcompat.widget.LinearLayoutCompat>
